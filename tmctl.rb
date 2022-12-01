@@ -15,6 +15,8 @@ class Tmctl < Formula
 
       def install
         bin.install "tmctl_macOS_arm64" => "tmctl"
+        chmod 0555, bin/"tmctl"
+        generate_completions_from_executable(bin/"tmctl", "completion", shells: [:bash, :zsh])
       end
     end
     if Hardware::CPU.intel?
@@ -23,6 +25,8 @@ class Tmctl < Formula
 
       def install
         bin.install "tmctl_macOS_amd64" => "tmctl"
+        chmod 0555, bin/"tmctl"
+        generate_completions_from_executable(bin/"tmctl", "completion", shells: [:bash, :zsh])
       end
     end
   end
@@ -34,6 +38,8 @@ class Tmctl < Formula
 
       def install
         bin.install "tmctl_linux_amd64" => "tmctl"
+        chmod 0555, bin/"tmctl"
+        generate_completions_from_executable(bin/"tmctl", "completion", shells: [:bash, :zsh])
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
@@ -42,6 +48,8 @@ class Tmctl < Formula
 
       def install
         bin.install "tmctl_linux_armv6" => "tmctl"
+        chmod 0555, bin/"tmctl"
+        generate_completions_from_executable(bin/"tmctl", "completion", shells: [:bash, :zsh])
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -50,6 +58,8 @@ class Tmctl < Formula
 
       def install
         bin.install "tmctl_linux_arm64" => "tmctl"
+        chmod 0555, bin/"tmctl"
+        generate_completions_from_executable(bin/"tmctl", "completion", shells: [:bash, :zsh])
       end
     end
   end
