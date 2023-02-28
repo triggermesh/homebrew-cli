@@ -5,13 +5,13 @@
 class Tmctl < Formula
   desc "tmctl"
   homepage "https://github.com/triggermesh/tmctl"
-  version "1.1.2"
+  version "1.2.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/triggermesh/tmctl/releases/download/v1.1.2/tmctl_macOS_amd64.tar.gz"
-      sha256 "664694be1f08c6ebe978f8651b3e7842658864eea4ab140811b5fdc687606b0f"
+      url "https://github.com/triggermesh/tmctl/releases/download/v1.2.0/tmctl_macOS_amd64.tar.gz"
+      sha256 "c601eb6f7fc31fe1e0679e82e3913656634922ba970dbb25783dc7aadc1d781d"
 
       def install
         bin.install "tmctl"
@@ -19,8 +19,8 @@ class Tmctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/triggermesh/tmctl/releases/download/v1.1.2/tmctl_macOS_arm64.tar.gz"
-      sha256 "ff81ed9cdac475e0ed4907567287b77ca9bfa15a85a8d17b42f41ea529a84c83"
+      url "https://github.com/triggermesh/tmctl/releases/download/v1.2.0/tmctl_macOS_arm64.tar.gz"
+      sha256 "b9ac47da435b85c9948187568d14944ffceb4b4e7a05b6a836e156cc5bcf3fff"
 
       def install
         bin.install "tmctl"
@@ -31,8 +31,8 @@ class Tmctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/triggermesh/tmctl/releases/download/v1.1.2/tmctl_linux_arm64.tar.gz"
-      sha256 "8ae190ecbc558eb2884f227f2ea08c3e1d6183c0508459554f0eb72d02f8b44f"
+      url "https://github.com/triggermesh/tmctl/releases/download/v1.2.0/tmctl_linux_arm64.tar.gz"
+      sha256 "edc99d4f8d8d29387e072bb16f32da1f6463cc1937679803ca3e54a25841ab0c"
 
       def install
         bin.install "tmctl"
@@ -40,8 +40,8 @@ class Tmctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/triggermesh/tmctl/releases/download/v1.1.2/tmctl_linux_amd64.tar.gz"
-      sha256 "b777f3054f23a7d4fa97949f2030cf360ea72bfe6a56bfd991f069e6b6c8488a"
+      url "https://github.com/triggermesh/tmctl/releases/download/v1.2.0/tmctl_linux_amd64.tar.gz"
+      sha256 "3c7d3fa184bf1f44f35fe495d93c9f92f02c733a4b06ede11ee98c85582c75ff"
 
       def install
         bin.install "tmctl"
@@ -49,8 +49,8 @@ class Tmctl < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/triggermesh/tmctl/releases/download/v1.1.2/tmctl_linux_armv6.tar.gz"
-      sha256 "cccb35c7c0cd1f101737579146bf15000a1d49f14cd825f364d73966e13b9c76"
+      url "https://github.com/triggermesh/tmctl/releases/download/v1.2.0/tmctl_linux_armv6.tar.gz"
+      sha256 "ed6180138c771ac11cc8d23c1575340b2fd37b3d288e9cbaa1f79c1e51636c68"
 
       def install
         bin.install "tmctl"
